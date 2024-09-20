@@ -12,9 +12,10 @@ while True:
             LED.value(1)
             utime.sleep(0.1)
             if BUTTON.value() == 1:
-                utime.sleep(0.1)
-                val += 1
-                print(val)
+                utime.sleep(0.2)
+                if BUTTON.value() == 0:
+                    val += 1
+                    print(val)
     if val == 4:
         while (val == 4 or val == 5):
             LED.value(0)
@@ -22,9 +23,10 @@ while True:
             LED.value(1)
             utime.sleep(0.05)
             if BUTTON.value() == 1:
-                utime.sleep(0.1)
-                val += 1
-                print(val)
+                utime.sleep(0.2)
+                if BUTTON.value() == 0:
+                    val += 1
+                    print(val)
     if val == 6:
         utime.sleep(0.2)
         LED.value(0)
